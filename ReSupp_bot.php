@@ -33,6 +33,10 @@
         $textMessage = mb_strtolower($arrDataAnswer['message']['text']);
         if($textMessage == '/start') {
             $ReSupp_bot->sendStartInlineButton();
+        } else if($textMessage == '/hello') {
+            $ReSupp_bot->chat_sendMessage('Привет! Выбери одну из кнопок под стартовым сообщением.');
+        } else if($textMessage == '/bye') {
+            $ReSupp_bot->chat_sendMessage('Пока! Было приятно поработать 😊');
         }
     }
     
@@ -47,6 +51,8 @@
         $dataButton = $arrDataAnswer['callback_query']['data'];
         
         $ReSupp_bot->startButtonHandler();
+        $ReSupp_bot->petButtonHandler();
+        $ReSupp_bot->studyButtonHandler();
         $ReSupp_bot->otherButtonHandler();
         $ReSupp_bot->rateButtonHandler();
     }

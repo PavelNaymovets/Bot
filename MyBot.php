@@ -253,20 +253,21 @@
                          'inline_keyboard' => array(
                              array(
                                  array(
-                                     'text' => '1',
-                                     'callback_data' => 'epam'
+                                     'text' => 'Библиотека для GetCourse',
+                                     'url' => 'https://github.com/PavelNaymovets/GC-library',
+                                     'callback_data' => 'noHandle'
                                  )
                              ),
                              array(
                                  array(
                                      'text' => '2',
-                                     'callback_data' => 'geekBrains'
+                                     'callback_data' => 'noHandle'
                                  )
                              ),
                              array(
                                  array(
                                      'text' => '<< Назад',
-                                     'callback_data' => 'back_study_mainMenu'
+                                     'callback_data' => 'back_pet_mainMenu'
                                  )
                              )
                          )
@@ -604,13 +605,19 @@
             }
         }
         
+        /* ОБРАБОТКА НАЖАТИЯ НА КНОПКИ. РАЗДЕЛ: PET-ПРОЕКТЫ */
+        public function petButtonHandler() {
+            if($this->dataButton == 'back_pet_mainMenu') {
+                $this->backToStartInlineButton();
+            }
+        }
+        
         /* ОБРАБОТКА НАЖАТИЯ НА КНОПКИ. РАЗДЕЛ: ОБУЧЕНИЕ */
         public function studyButtonHandler() {
             if($this->dataButton == 'epam') {
                 $this->sendEpamInlineButton();
             } else if($this->dataButton == 'geekBrains') {
                 $this->sendGeekBrainsInlineButton();
-                
             } else if($this->dataButton == 'back_study_mainMenu') {
                 $this->backToStartInlineButton();
             } else if($this->dataButton == 'back_epam_study') {
