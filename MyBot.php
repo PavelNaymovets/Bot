@@ -176,6 +176,7 @@
             	'photo'	=> new CURLFile($filePath),
             	'parse_mode' => 'html',
             );
+            // 'photo' => 'https://hmns.in/hmnsgc/telegramBot/img/cat.jpg', //в качестве источника можно указывать URL.
             $this->sendQueryToTelegram('sendPhoto', $arrayQuery);
         }
         
@@ -203,6 +204,14 @@
         }
         
         /* ОТПРАВКА ДОКУМЕНТА В ЧАТ */
+        public function chat_sendDocument($filePath) {
+            $arrayQuery = array(
+            	'chat_id' => $this->chatId,
+            	'document'	=> new CURLFile($filePath),
+            	'parse_mode' => 'html',
+            );
+            $this->sendQueryToTelegram('sendDocument', $arrayQuery);
+        }
         
         
         //-----------------------------------------------------
@@ -750,6 +759,7 @@
                 $this->chat_sendOneRandomPhoto($filePath);
                 
                 // $this->chat_sendGroupPhoto($listFiles); //отпавка группы фотографий
+                // $this->chat_sendDocument($filePath); //отправка документа в чат
                 
             } else if($this->dataButton == 'rateBot') {
                 
