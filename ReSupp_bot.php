@@ -22,7 +22,7 @@
     require_once 'MyBot.php';
     
     /* ЗАДАНИЕ ОСНОВНЫХ КОНСТАНТ */
-    const BOT_TOKEN = '5777734619:AAF1cp34ez6BphAOM3VSFjmErLITcKJOml08';
+    const BOT_TOKEN = '';
     
     /* ПОЛУЧЕНИЕ СООБЩЕНИЙ ИЗ ЧАТА В ВИДЕ АССОЦИАТИВНОГО МАССИВА*/
     $ReSupp_bot = new MyBot(BOT_TOKEN);
