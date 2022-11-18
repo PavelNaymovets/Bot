@@ -48,8 +48,6 @@
     
     /* ОБРАБОТКА НАЖАТИЯ КНОПОК INLINE КЛАВИАТУРЫ */
     if(!empty($arrDataAnswer['callback_query'])) {
-        $dataButton = $arrDataAnswer['callback_query']['data'];
-        
         $ReSupp_bot->startButtonHandler();
         $ReSupp_bot->petButtonHandler();
         $ReSupp_bot->studyButtonHandler();
