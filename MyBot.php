@@ -241,7 +241,7 @@
         
         /* КНОПКИ МЕНЮ. РАЗДЕЛ: PET-ПРОЕКТЫ */
         public function sendPetInlineButton() {
-            $textMessage = "$this->userName, вы в разделе Pet-проекты 📋\r\n\r\nВ этом разделе содержатся ссылки на мои домашние проекты. Код проектов и их описание (файл README) расположены на удаленном репозитории GitHub.\r\n\r\nНиже представлены кнопки со ссылками на задачи из курса👇";
+            $textMessage = "$this->userName, вы в разделе Pet-проекты 📋\r\n\r\nВ этом разделе содержатся ссылки на мои домашние проекты. Код проектов и их описание (файл README) расположены на удаленном репозитории GitHub.\r\n\r\n<b>Неактивные кнопки (разделы по языкам):</b>\r\n\r\n▫PHP\r\n▫Java\r\n▫HTML5, CSS3, PHP\r\n\r\nНиже представлены кнопки со ссылками на проекты👇";
     
             $arrayQuery = array(
                  'chat_id' => $this->chatId,
@@ -253,6 +253,12 @@
                          'inline_keyboard' => array(
                              array(
                                  array(
+                                     'text' => 'PHP',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
                                      'text' => 'Библиотека для GetCourse',
                                      'url' => 'https://github.com/PavelNaymovets/GC-library',
                                      'callback_data' => 'noHandle'
@@ -260,7 +266,90 @@
                              ),
                              array(
                                  array(
-                                     'text' => '2',
+                                     'text' => 'Бот ReSupp_bot',
+                                     'url' => 'https://github.com/PavelNaymovets/Bot',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => 'API для курса на GetCourse',
+                                     'url' => 'https://github.com/PavelNaymovets/miskaJane',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => 'Добавление заказа, пользователя через API GetCourse',
+                                     'url' => 'https://github.com/PavelNaymovets/GetCourse',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => 'Java',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => 'Сетевой чат',
+                                     'url' => 'https://github.com/PavelNaymovets/Java_Level2_NetworkChat_v2_NaumovetsPR',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => 'Простой файловый менеджер',
+                                     'url' => 'https://github.com/PavelNaymovets/Java_Level2_FileManager_NaumovetsPR',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => 'Игра “Bulls and Cows”',
+                                     'url' => 'https://github.com/PavelNaymovets/Java_Level2_BullsAndCows_NaumovetsPR/tree/BullsAndCows',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => 'Игра “Ловля капли мышкой”',
+                                     'url' => 'https://github.com/PavelNaymovets/cath_the_drop_v2',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => 'Калькулятор',
+                                     'url' => 'https://github.com/PavelNaymovets/Java_Level1_HomeWorks_NaumovetsPR/tree/homeWork8/src/main/java/ru/gb/naumovets/homeWork8',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),                             
+                             array(
+                                 array(
+                                     'text' => 'Минер',
+                                     'url' => 'https://github.com/PavelNaymovets/Java_Level1_HomeWorks_NaumovetsPR/tree/homeWork8/src/main/java/ru/gb/naumovets/homeWork4',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => 'HTML5, CSS3, PHP',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => 'Сайт зубной клиники',
+                                     'url' => 'https://etalondentclinic.ru/',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => 'Одностраничный лендинг',
+                                     'url' => 'https://github.com/PavelNaymovets/VisualStudioProjects/tree/homeWork6/lesson_2%2C3%2C4%2C5%2C6/homeWork_divBlocking',
                                      'callback_data' => 'noHandle'
                                  )
                              ),
