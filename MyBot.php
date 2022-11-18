@@ -180,7 +180,30 @@
         }
         
         /* ОТПРАВКА ГРУППЫ ФОТОГРАФИЙ В ЧАТ */
+        public function chat_sendGroupPhoto($listFile) {
+            $filePath_0 = __DIR__ . "/img/" . $listFile[0];
+            $filePath_1 = __DIR__ . "/img/" . $listFile[1];
+            $filePath_2 = __DIR__ . "/img/" . $listFile[2];
+            $filePath_3 = __DIR__ . "/img/" . $listFile[3];
+            
+            $arrayQuery = array(
+              "chat_id" => $this->chatId,
+        	  'media' => json_encode([
+            	    ['type' => 'photo', 'media' => 'attach://cat_0.jpg' ],
+            	    ['type' => 'photo', 'media' => 'attach://cat_1.jpg' ],
+            	    ['type' => 'photo', 'media' => 'attach://cat_2.jpg' ],
+            	    ['type' => 'photo', 'media' => 'attach://cat_3.jpg' ],
+                    ]),
+                    'cat_0.jpg' => new CURLFile($filePath_0),
+                    'cat_1.jpg' => new CURLFile($filePath_1),
+                    'cat_2.jpg' => new CURLFile($filePath_2),
+                    'cat_3.jpg' => new CURLFile($filePath_3),
+            );
+            $this->sendQueryToTelegram('sendMediaGroup', $arrayQuery);
+        }
+        
         /* ОТПРАВКА ДОКУМЕНТА В ЧАТ */
+        
         
         //-----------------------------------------------------
         // ОТПРАВКА ТЕКСТОВОГО СООБЩЕНИЯ НА ПОЧТУ
@@ -725,6 +748,8 @@
                 $randFile = rand(0, $max);
                 $filePath = __DIR__ . "/img/" . $listFiles[$randFile];
                 $this->chat_sendOneRandomPhoto($filePath);
+                
+                // $this->chat_sendGroupPhoto($listFiles); //отпавка группы фотографий
                 
             } else if($this->dataButton == 'rateBot') {
                 
