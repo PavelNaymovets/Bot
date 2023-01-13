@@ -298,6 +298,13 @@
                              ),
                              array(
                                  array(
+                                     'text' => 'SlonikStore магазин кодов Steam',
+                                     'url' => 'https://github.com/PavelNaymovets/SlonikStore',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
                                      'text' => 'Бот ReSupp_bot',
                                      'url' => 'https://github.com/PavelNaymovets/Bot',
                                      'callback_data' => 'noHandle'
