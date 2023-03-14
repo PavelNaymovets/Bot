@@ -285,7 +285,7 @@
                          'inline_keyboard' => array(
                              array(
                                  array(
-                                     'text' => 'PHP',
+                                     'text' => 'РАЗДЕЛ - PHP',
                                      'callback_data' => 'noHandle'
                                  )
                              ),
@@ -326,7 +326,14 @@
                              ),
                              array(
                                  array(
-                                     'text' => 'Java',
+                                     'text' => 'РАЗДЕЛ - Java',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => 'Простой интернет магазин',
+                                     'url' => 'https://github.com/PavelNaymovets/spring_secutiry/tree/spring_practice',
                                      'callback_data' => 'noHandle'
                                  )
                              ),
@@ -374,7 +381,7 @@
                              ),
                              array(
                                  array(
-                                     'text' => 'HTML5, CSS3, PHP',
+                                     'text' => 'РАЗДЕЛ - HTML5, CSS3, PHP',
                                      'callback_data' => 'noHandle'
                                  )
                              ),
