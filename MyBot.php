@@ -271,9 +271,9 @@
             $this->sendQueryToTelegram('sendMessage', $arrayQuery);
         }
         
-        /* КНОПКИ МЕНЮ. РАЗДЕЛ: PET-ПРОЕКТЫ */
-        public function sendPetInlineButton() {
-            $textMessage = "$this->userName, Вы в разделе Pet-проекты 📋\r\n\r\nВ этом разделе содержатся ссылки на мои домашние проекты. Код проектов и их описание (файл README) расположены на удаленном репозитории GitHub.\r\n\r\n<b>Неактивные кнопки (разделы):</b>\r\n\r\n▫PHP\r\n▫Java\r\n▫HTML5, CSS3, PHP\r\n▫Задачи с собеседований\r\n\r\nНиже представлены кнопки со ссылками на проекты👇";
+        /* КНОПКИ МЕНЮ. РАЗДЕЛ: PHP-ПРОЕКТЫ */
+        public function sendPhpProjectsInlineButton() {
+            $textMessage = "$this->userName, Вы в разделе Pet-проекты 📋\r\n\r\nВ этом разделе содержатся ссылки на мои домашние проекты. Код проектов и их описание (файл README) расположены на удаленном репозитории GitHub.\r\n\r\n<b>Разделы:</b>\r\n\r\n▫PHP\r\n▫Java\r\n▫HTML5, CSS3, PHP\r\n▫Задачи с собеседований\r\n\r\nНиже представлены кнопки со ссылками на проекты👇";
     
             $arrayQuery = array(
                  'chat_id' => $this->chatId,
@@ -285,51 +285,64 @@
                          'inline_keyboard' => array(
                              array(
                                  array(
-                                     'text' => 'РАЗДЕЛ - PHP',
-                                     'callback_data' => 'noHandle'
-                                 )
-                             ),
-                             array(
-                                 array(
-                                     'text' => 'Библиотека для GetCourse',
+                                     'text' => 'Планировщик задач',
                                      'url' => 'https://github.com/PavelNaymovets/GC-library',
                                      'callback_data' => 'noHandle'
                                  )
                              ),
                              array(
                                  array(
-                                     'text' => 'SlonikStore магазин кодов Steam',
+                                     'text' => 'Магазин кодов Steam',
                                      'url' => 'https://github.com/PavelNaymovets/SlonikStore',
                                      'callback_data' => 'noHandle'
                                  )
                              ),
                              array(
                                  array(
-                                     'text' => 'Бот ReSupp_bot',
+                                     'text' => 'Телеграм бот',
                                      'url' => 'https://github.com/PavelNaymovets/Bot',
                                      'callback_data' => 'noHandle'
                                  )
                              ),
                              array(
                                  array(
-                                     'text' => 'API для курса на GetCourse',
+                                     'text' => 'Фитнес трекер',
                                      'url' => 'https://github.com/PavelNaymovets/miskaJane',
                                      'callback_data' => 'noHandle'
                                  )
                              ),
                              array(
                                  array(
-                                     'text' => 'Добавление заказа, пользователя через API GetCourse',
+                                     'text' => 'Добавление заказа API GetCourse',
                                      'url' => 'https://github.com/PavelNaymovets/GetCourse',
                                      'callback_data' => 'noHandle'
                                  )
                              ),
                              array(
                                  array(
-                                     'text' => 'РАЗДЕЛ - Java',
-                                     'callback_data' => 'noHandle'
+                                     'text' => '<< Назад',
+                                     'callback_data' => 'back_petMenu'
                                  )
-                             ),
+                             )
+                         )
+                     )
+                 )
+            );
+            $this->chat_editMessage($arrayQuery);
+        }
+        
+        /* КНОПКИ МЕНЮ. РАЗДЕЛ: Java-ПРОЕКТЫ */
+        public function sendJavaProjectsInlineButton() {
+            $textMessage = "$this->userName, Вы в разделе Pet-проекты 📋\r\n\r\nВ этом разделе содержатся ссылки на мои домашние проекты. Код проектов и их описание (файл README) расположены на удаленном репозитории GitHub.\r\n\r\n<b>Разделы:</b>\r\n\r\n▫PHP\r\n▫Java\r\n▫HTML5, CSS3, PHP\r\n▫Задачи с собеседований\r\n\r\nНиже представлены кнопки со ссылками на проекты👇";
+    
+            $arrayQuery = array(
+                 'chat_id' => $this->chatId,
+                 'message_id' => $this->messageId,
+                 'text' => $textMessage,
+                 'parse_mode' => 'html',
+                 'reply_markup' => json_encode(
+                     array(
+                         'inline_keyboard' => array(
                              array(
                                  array(
                                      'text' => 'Простой интернет магазин',
@@ -381,10 +394,29 @@
                              ),
                              array(
                                  array(
-                                     'text' => 'РАЗДЕЛ - HTML5, CSS3, PHP',
-                                     'callback_data' => 'noHandle'
+                                     'text' => '<< Назад',
+                                     'callback_data' => 'back_petMenu'
                                  )
-                             ),
+                             )
+                         )
+                     )
+                 )
+            );
+            $this->chat_editMessage($arrayQuery);
+        }
+        
+        /* КНОПКИ МЕНЮ. РАЗДЕЛ: HTML,CSS-ПРОЕКТЫ */
+        public function sendHtmlCssProjectsInlineButton() {
+            $textMessage = "$this->userName, Вы в разделе Pet-проекты 📋\r\n\r\nВ этом разделе содержатся ссылки на мои домашние проекты. Код проектов и их описание (файл README) расположены на удаленном репозитории GitHub.\r\n\r\n<b>Разделы:</b>\r\n\r\n▫PHP\r\n▫Java\r\n▫HTML5, CSS3, PHP\r\n▫Задачи с собеседований\r\n\r\nНиже представлены кнопки со ссылками на проекты👇";
+    
+            $arrayQuery = array(
+                 'chat_id' => $this->chatId,
+                 'message_id' => $this->messageId,
+                 'text' => $textMessage,
+                 'parse_mode' => 'html',
+                 'reply_markup' => json_encode(
+                     array(
+                         'inline_keyboard' => array(
                              array(
                                  array(
                                      'text' => 'Сайт зубной клиники',
@@ -401,15 +433,83 @@
                              ),
                              array(
                                  array(
-                                     'text' => 'РАЗДЕЛ - Задачи с собеседований',
-                                     'callback_data' => 'noHandle'
+                                     'text' => '<< Назад',
+                                     'callback_data' => 'back_petMenu'
                                  )
-                             ),
+                             )
+                         )
+                     )
+                 )
+            );
+            $this->chat_editMessage($arrayQuery);
+        }
+        
+        /* КНОПКИ МЕНЮ. РАЗДЕЛ: Задачи с собеседований */
+        public function sendInterviewTasksProjectsInlineButton() {
+            $textMessage = "$this->userName, Вы в разделе Pet-проекты 📋\r\n\r\nВ этом разделе содержатся ссылки на мои домашние проекты. Код проектов и их описание (файл README) расположены на удаленном репозитории GitHub.\r\n\r\n<b>Разделы:</b>\r\n\r\n▫PHP\r\n▫Java\r\n▫HTML5, CSS3, PHP\r\n▫Задачи с собеседований\r\n\r\nНиже представлены кнопки со ссылками на проекты👇";
+    
+            $arrayQuery = array(
+                 'chat_id' => $this->chatId,
+                 'message_id' => $this->messageId,
+                 'text' => $textMessage,
+                 'parse_mode' => 'html',
+                 'reply_markup' => json_encode(
+                     array(
+                         'inline_keyboard' => array(
                              array(
                                  array(
                                      'text' => 'Решение квадратных уравнений',
                                      'url' => 'https://github.com/PavelNaymovets/interview_task_quadratic_equation',
                                      'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => '<< Назад',
+                                     'callback_data' => 'back_petMenu'
+                                 )
+                             )
+                         )
+                     )
+                 )
+            );
+            $this->chat_editMessage($arrayQuery);
+        }
+        
+        /* КНОПКИ МЕНЮ. РАЗДЕЛ: PET-ПРОЕКТЫ */
+        public function sendPetInlineButton() {
+            $textMessage = "$this->userName, Вы в разделе Pet-проекты 📋\r\n\r\nВ этом разделе содержатся ссылки на мои домашние проекты. Код проектов и их описание (файл README) расположены на удаленном репозитории GitHub.\r\n\r\n<b>Разделы:</b>\r\n\r\n▫PHP\r\n▫Java\r\n▫HTML5, CSS3, PHP\r\n▫Задачи с собеседований\r\n\r\nНиже представлены кнопки со ссылками на проекты👇";
+    
+            $arrayQuery = array(
+                 'chat_id' => $this->chatId,
+                 'message_id' => $this->messageId,
+                 'text' => $textMessage,
+                 'parse_mode' => 'html',
+                 'reply_markup' => json_encode(
+                     array(
+                         'inline_keyboard' => array(
+                             array(
+                                 array(
+                                     'text' => 'PHP',
+                                     'callback_data' => 'PHP_projects'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => 'Java',
+                                     'callback_data' => 'Java_projects'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => 'HTML5, CSS3',
+                                     'callback_data' => 'HTML5_CSS3_projects'
+                                 )
+                             ),
+                             array(
+                                 array(
+                                     'text' => 'Задачи с собеседований',
+                                     'callback_data' => 'interview_projects'
                                  )
                              ),
                              array(
@@ -757,6 +857,16 @@
         public function petButtonHandler() {
             if($this->dataButton == 'back_pet_mainMenu') {
                 $this->backToStartInlineButton();
+            } else if($this->dataButton == 'back_petMenu') {
+                $this->sendPetInlineButton();
+            } else if($this->dataButton == 'PHP_projects') {
+                $this->sendPhpProjectsInlineButton();
+            } else if($this->dataButton == 'Java_projects') {
+                $this->sendJavaProjectsInlineButton();
+            } else if($this->dataButton == 'HTML5_CSS3_projects') {
+                $this->sendHtmlCssProjectsInlineButton();
+            } else if($this->dataButton == 'interview_projects') {
+                $this->sendInterviewTasksProjectsInlineButton();
             }
         }
         
