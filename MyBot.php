@@ -465,6 +465,13 @@
                              ),
                              array(
                                  array(
+                                     'text' => 'Программа-аналог базы данных в памяти',
+                                     'url' => 'https://github.com/PavelNaymovets/interview_task_digDes',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
                                      'text' => '<< Назад',
                                      'callback_data' => 'back_petMenu'
                                  )
