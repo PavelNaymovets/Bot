@@ -345,6 +345,13 @@
                          'inline_keyboard' => array(
                              array(
                                  array(
+                                     'text' => 'Система управления проектами',
+                                     'url' => 'https://github.com/PavelNaymovets/project_management_system/tree/develop',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
                                      'text' => 'Простой интернет магазин',
                                      'url' => 'https://github.com/PavelNaymovets/spring_secutiry/tree/spring_practice',
                                      'callback_data' => 'noHandle'
