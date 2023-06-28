@@ -465,6 +465,13 @@
                          'inline_keyboard' => array(
                              array(
                                  array(
+                                     'text' => 'Система управления мероприятиями',
+                                     'url' => 'https://github.com/PavelNaymovets/interview_task_event',
+                                     'callback_data' => 'noHandle'
+                                 )
+                             ),
+                             array(
+                                 array(
                                      'text' => 'Решение квадратных уравнений',
                                      'url' => 'https://github.com/PavelNaymovets/interview_task_quadratic_equation',
                                      'callback_data' => 'noHandle'
